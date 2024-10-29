@@ -1,0 +1,7 @@
+<div class="flex-column-center">
+    <div class="product-card-image-container main-border-radius">
+        <img class="" src="{{ product | image_url: width: 400 }}" alt="My image's alt text" style="width: 120px;" />
+    </div>
+    <h3 class="our-categories-title-spacing" >{{ product.title }}</h3>
+    <p class="text-grey">{{ product.price | money }}</p>
+</div>

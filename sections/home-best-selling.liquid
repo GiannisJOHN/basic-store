@@ -1,0 +1,27 @@
+<div class="container">
+    <h2 class="section-title">Best Selling Items</h2>
+    <div class="grid-4-column">
+        {% for product in collections['best-selling'].products %}
+            {% if forloop.index0 == 8 %}
+                {% break %}
+            {% endif %}
+
+            {% render 'card-product', product: product %}
+        {% endfor %}
+    </div>
+    <div class="best-selling-cta">
+        <a href="" class="btn home-best-selling-btn-style" >Go To Shop</a>
+    </div>
+</div>
+
+
+{%  schema  %}  
+    {
+        "name": "Best Selling Items",
+        "tag": "section",
+        "class": "page-section section-vertical-spacing",
+        "enabled_on": {
+            "templates": ["index"]
+        }
+    }
+{% endschema %}

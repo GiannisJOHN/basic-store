@@ -1,5 +1,13 @@
 <div class="container">
-    <h2 class="heading-align-center">Our Categories</h2>
+    <h2 class="section-title">Our Categories</h2>
+    <div class="grid-4-column">
+        {% for collection in collections %}
+            {% if collection.title == "Best Selling" %}
+                {% continue %}
+            {% endif %}
+            {% render "card-select-collection", collection: collection %}
+        {% endfor %}
+    </div>
 </div>
 
 

@@ -5,10 +5,18 @@
         },
         "Home-Our-Categories": {
             "type": "home-our-categories"
+        },
+        "Home-Best-Selling": {
+            "type": "home-best-selling"
+        },
+        "Home-Offers": {
+            "type": "home-offers"
         }
     },
     "order": [
         "Home-Hero",
-        "Home-Our-Categories"
-    ]
+        "Home-Our-Categories",
+        "Home-Best-Selling",
+        "Home-Offers"
+    ] 
 }

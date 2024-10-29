@@ -1,0 +1,14 @@
+{
+    "type": "footer",
+    "name": "footer-group",
+    "sections": {
+        "Footer-group": {
+            "type": "global-footer",
+            "settings": {}
+        }
+
+    },
+    "order": [
+        "Footer-group"
+    ]
+}

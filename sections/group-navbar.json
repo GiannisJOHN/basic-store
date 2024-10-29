@@ -1,0 +1,14 @@
+{
+    "type": "header",
+    "name": "navbar",
+    "sections": {
+        "Main-navigation": {
+            "type": "global-navigation",
+            "settings": {}
+        }
+
+    },
+    "order": [
+        "Main-navigation"
+    ]
+}

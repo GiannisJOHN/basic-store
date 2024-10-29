@@ -2,9 +2,13 @@
     "sections": {
         "Home-Hero": {
             "type": "home-hero"
+        },
+        "Home-Our-Categories": {
+            "type": "home-our-categories"
         }
     },
     "order": [
-        "Home-Hero"
+        "Home-Hero",
+        "Home-Our-Categories"
     ]
 }

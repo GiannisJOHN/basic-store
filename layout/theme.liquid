@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {{ "style-index.css" | asset_url | stylesheet_tag }}
     {{ "style-design-system.css" | asset_url | stylesheet_tag }}
+    {{ "style-index.css" | asset_url | stylesheet_tag }}
 
 
     <script src="{{ 'script-responsive-navbar.js' | asset_url }}" defer></script>
-    
+
     <title>{{ page_title }}</title>
     {{content_for_header}}
 </head>

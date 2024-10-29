@@ -1,12 +1,20 @@
-<h1>hi from hero</h1>
-
-
-
+<div class="container">
+    <div class="home-hero">
+        <div class="home-hero-info">
+            <h1>Iphone 15 series</h1>
+            <p class="home-hero-text">Limited stocks available. Grab it now!</p>
+            <button class="home-hero-btn">Shop</button>
+        </div>
+        <img class="cover-image" src="{{ 'image-hero-phone.png' | asset_url }}" alt="Hero Image" width="100%" height="100%"/>
+    </div>
+</div>
 
 
 {%  schema  %}  
 {
     "name": "Hero Section",
+    "tag": "section",
+    "class": "page-section",
     "enabled_on": {
         "templates": ["index"]
     }

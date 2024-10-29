@@ -1,5 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600&display=swap");
+
 :root {
     --color-black: #000000;
     --color-white: #ffffff;
-    
+
+
+    /*Transition */
+    --transition-basic: 0.248s;
+
+    /*Typography */
+    --font-family: "Poppins", sans-serif;
+
+    --font-desktop-h1: 4rem/6rem var(--font-family);
+    --font-desktop-h2: 2rem/3rem var(--font-family);
+    --font-desktop-h3: 1.125rem/1.7rem var(--font-family);
+    --font-text-md: 1rem/1.5rem var(--font-family);
+
+    /*Border */
+    --border-radius: 20px;
+
+    /*Space */
+    --space-4: 4px;
+    --space-8: 8px;
+    --space-16: 16px;
+    --space-24: 24px;
+    --space-32: 32px;
+    --space-40: 40px;
+    --space-48: 48px;
+    --space-56: 56px;
+    --space-64: 64px;
+    --space-72: 72px;
+    --space-80: 80px;
+    --space-88: 88px;
+    --space-96: 96px;
+    --space-104: 104px;
+    --space-112: 112px;
+    --space-120: 120px;
+    --space-128: 128px;
+    --space-136: 136px;
+    --space-144: 144px;
+    --space-152: 152px;
+    --space-160: 160px;
+    --space-168: 168px;
+    --space-176: 176px;
 }
+
+/*
+Line height (line spacing) to at least 1.5 times the font size;
+Spacing following paragraphs to at least 2 times the font size;
+Letter spacing (tracking) to at least 0.12 times the font size;
+Word spacing to at least 0.16 times the font size.
+*/

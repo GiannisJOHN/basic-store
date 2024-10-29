@@ -2,13 +2,13 @@
     "type": "header",
     "name": "navbar",
     "sections": {
-        "Main-navigation": {
-            "type": "global-navigation",
+        "Global-Navbar": {
+            "type": "global-navbar",
             "settings": {}
         }
 
     },
     "order": [
-        "Main-navigation"
+        "Global-Navbar"
     ]
 }

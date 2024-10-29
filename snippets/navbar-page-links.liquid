@@ -1,0 +1,11 @@
+{% for link in linklists.main-menu.links %}
+    <li class="navbar-link">
+        <a href="{{ link.url }}" class=" {% if request.path == link.url %}active{% endif %}"
+        {% if request.path == link.url %}
+            aria-current="page"
+        {% endif %}
+        >
+        {{- link.title -}}
+        </a>
+    </li>
+{% endfor %}

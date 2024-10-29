@@ -1,0 +1,50 @@
+<div class="top-info page-section">
+	<div class="container">
+		<div class="top-info-container">
+			<ul class="top-info-information">
+				<li class="top-info-text">
+					&#9993; basicstore@gmail.com
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<nav class="navbar page-section">
+	<div class="container navbar-container">
+		<a class="logo" href="/">
+			BasicStore.
+		</a>
+		<ul class="navbar-link-list">
+			{% render "navbar-page-links" %}
+		</ul>
+		<div class="navbar-icon-links-container">
+			<img
+				src="{{ 'icon-search.svg' | asset_url }}"
+				alt="search"
+				width="19px"
+				height="auto">
+			<img
+				src="{{ 'icon-like.svg' | asset_url }}"
+				alt="like"
+				width="19px"
+				height="auto">
+			<img
+				src="{{ 'icon-bag.svg' | asset_url }}"
+				alt="bag"
+				width="19px"
+				height="auto">
+		</div>
+		<button class="js-navbar-burger-menu">
+			<div class="burger-menu-line"></div>
+			<div class="burger-menu-line"></div>
+			<div class="burger-menu-line"></div>
+		</button>
+	</div>
+	<div class="js-navbar-dropdown">
+		<div class="container navbar-dropdown-container">
+			<ul class="navbar-dropdown-list">
+				{% render "main-navbar-links" %}
+			</ul>
+		</div>
+	</div>
+</nav>

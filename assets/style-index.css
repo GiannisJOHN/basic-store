@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    font: var(--font-text-sm);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.page-section {
+    display: flex;
+    justify-content: center;
+    padding: 0 40px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+}
+
+.section-vertical-spacing {
+    margin: var(--space-120) 0;
+}
+
+/*Top Info*/
+
+.top-info {
+    background-color: var(--color-black);
+}
+
+.top-info-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.top-info-information {
+    display: flex;
+    gap: 40px;
+    color: var(--color-white);
+}
+
+.top-info-text {
+    font: var(--font-text-xsm);
+    color: var(--color-stroke);
+}
+
+/*Navbar*/
+.logo {
+    order: 1;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbar {
+    border-bottom: 1px solid var(--color-stroke);
+    position: relative;
+    font-weight: bold;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.navbar-link-list {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    order: 2;
+    flex-grow: 1;
+}
+
+.navbar-icon-links-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+    order: 3;
+    flex-grow: 1;
+}
+
+.js-navbar-burger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    order: 2;
+}
+
+.burger-menu-line {
+    background-color: var(--color-black);
+    width: 26px;
+    height: 3px;
+    border-radius: 2px;
+}
+
+.js-navbar-dropdown {
+    background-color: var(--color-white);
+    position: absolute;
+    width: 100%;
+    top: calc(100% + 1px);
+    left: 0;
+    height: 0;
+    transition: height var(--trasnsition-basic);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.navbar-dropdown-container {
+    border-bottom: 1px solid var(--color-border);
+    padding: 0 40px;
+}
+
+.navbar-dropdown-list {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+@media (max-width: 720px) {
+    .navbar-link-list,
+    .navbar-icon-links-container {
+        display: none;
+    }
+
+    .js-navbar-burger-menu {
+        display: flex;
+    }
+}

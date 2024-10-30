@@ -20,6 +20,9 @@
         },
         "Global-Company-Info": {
             "type": "global-company-info"
+        },
+        "Global-Subscribe-Cta": {
+            "type": "global-subscribe-cta"
         }
     },
     "order": [
@@ -29,6 +32,7 @@
         "Home-Offers",
         "Global-Customer-Review",
         "Global-Latest-Posts",
-        "Global-Company-Info"
+        "Global-Company-Info",
+        "Global-Subscribe-Cta"
     ]
 }

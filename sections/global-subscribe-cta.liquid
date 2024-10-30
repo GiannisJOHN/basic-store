@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="subscribe-cta-container">
+        <img class="cover-image" src="{{ 'image-subscribe.png' | asset_url }}" alt="" />
+        <div class="subscribe-cta-content">
+            <h2>Subscribe Us now</h2>
+            <p>Get latest news, updates and deals directly mailed to your inbox.</p>
+            {% form 'contact' %}
+                <label for="email" class="label-hidden">Email Address</label>
+                <div class="subscribe-cta-special-input"> 
+                    <input class="subscribe-cta-input" type="email" id="email" name="email" placeholder="Your email address here" required aria-label="Email address" />
+                    <button class="subscribe-cta-btn" type="submit" aria-label="Subscribe">Subscribe</button>
+                </div>
+            {% endform %}
+        </div>
+    </div>
+</div>
+
+{%  schema  %}  
+    {
+        "name": "Subscribe-Cta",
+        "tag": "section",
+        "class": "page-section section-vertical-spacing"
+    }
+{% endschema %}

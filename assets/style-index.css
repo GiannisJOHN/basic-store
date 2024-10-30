@@ -38,6 +38,11 @@ h3 {
     font-weight: 700;
 }
 
+h5 {
+    font: var(--font-text-md);
+    font-weight: 700;
+}
+
 p, a, li, button {
     font: var(--font-text-md);
 }
@@ -47,6 +52,18 @@ p, a, li, button {
     display: flex;
     justify-content: center;
     padding: 0 40px;
+}
+
+@media (max-width: 590px) {
+    .page-section {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .page-section {
+        padding: 0 15px;
+    }
 }
 
 .container {
@@ -86,11 +103,6 @@ p, a, li, button {
     align-items: center;
 }
 
-.grid-4-column {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--grid-gap);
-}
 
 .grid-2-column {
     display: grid;
@@ -98,10 +110,41 @@ p, a, li, button {
     gap: var(--grid-gap);
 }
 
+.grid-3-column {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--grid-gap);
+}
+
+.grid-4-column {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--grid-gap);
+}
+
+@media (max-width: 1040px) {
+    .grid-3-column {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--grid-gap);
+    }
+}
+
 @media (max-width: 900px) {
     .grid-4-column {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .grid-2-column {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 718px) {
+    .grid-3-column {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
 }
 
 @media (max-width: 520px) {
@@ -109,10 +152,6 @@ p, a, li, button {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .grid-2-column {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    
 }
 
 
@@ -236,15 +275,43 @@ p, a, li, button {
     position: relative;
 }
 
-.home-hero-info {
+.home-overlay-info {
     position: absolute;
     left: 80px;
     bottom: 120px;
     color: var(--color-white);
 }
 
+.home-offer-overlay-info {
+    position: absolute;
+    left: 60px;
+    bottom: 60px;
+    color: var(--color-white);
+    padding-right: 10px;
+}
+
 .home-hero-text {
     margin: 12px 0 36px 0;
+}
+
+
+@media (max-width: 1120px) {
+    .home-offer-overlay-info {
+        left: 40px;
+        bottom: 40px;
+    }
+}
+
+@media (max-width: 990px) {
+    .home-offer-overlay-info {
+        left: 20px;
+        bottom: 20px;
+    }
+
+    .home-hero-text {
+        margin: 12px 0 18px 0;
+    }
+    
 }
 
 .home-hero-btn-style {
@@ -283,4 +350,24 @@ p, a, li, button {
     color: var(--color-white);
     font-weight: 500;
     border-radius: var(--border-radius);
+}
+
+.home-offer-container {
+    position: relative;
+    min-height: 340px;
+}
+
+.customer-review-ranking {
+    margin: 30px 0 12px 0;
+}
+
+.customer-review-card {
+    box-shadow: var(--shadow);
+    padding: 30px;
+    border-radius: var(--border-radius);
+}
+
+.review-star {
+    fill: #F4890A;
+    stroke: #F4890A;
 }

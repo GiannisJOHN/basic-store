@@ -11,12 +11,16 @@
         },
         "Home-Offers": {
             "type": "home-offers"
+        },
+        "Global-Customer-Review": {
+            "type": "global-customer-review"
         }
     },
     "order": [
         "Home-Hero",
         "Home-Our-Categories",
         "Home-Best-Selling",
-        "Home-Offers"
+        "Home-Offers",
+        "Global-Customer-Review"
     ] 
 }

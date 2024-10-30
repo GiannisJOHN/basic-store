@@ -379,3 +379,29 @@ p, a, li, button {
     gap: 12px;
     text-align: center;
 }
+
+.company-info-container {
+    width: 100%;
+    min-height: 235px;
+    box-shadow: var(--shadow);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.company-info-title {
+    margin: 24px 0 9px 0;
+}
+
+.company-info-icon {
+    width: 34px !important;
+    height: 34px !important;
+}
+
+.company-info-icon * {
+    stroke: #F4890A !important;
+}

@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="grid-4-column">
+        <div class="company-info-container">
+            {% render 'company-info-icons', icon_type: 'delivery' %}
+            <h5 class="company-info-title">Free delivery</h5>
+            <p>Consectetur adipi elit lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="company-info-container">
+            {% render 'company-info-icons', icon_type: 'quality' %}
+            <h5 class="company-info-title">Quality guarantee</h5>
+            <p>Dolor sit amet orem ipsu mcons ectetur adipi elit.</p>
+        </div>
+        <div class="company-info-container">
+            {% render 'company-info-icons', icon_type: 'offer' %}
+            <h5 class="company-info-title">Quality guarantee</h5>
+            <p>Dolor sit amet orem ipsu mcons ectetur adipi elit.</p>
+        </div>
+        <div class="company-info-container">
+            {% render 'company-info-icons', icon_type: 'secure' %}
+            <h5 class="company-info-title">100% secure payment</h5>
+            <p>Rem Lopsum dolor sit amet, consectetur adipi elit.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{%  schema  %}  
+    {
+        "name": "Company Info",
+        "tag": "section",
+        "class": "page-section section-vertical-spacing"
+    }
+{% endschema %}

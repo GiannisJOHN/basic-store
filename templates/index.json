@@ -17,6 +17,9 @@
         },
         "Global-Latest-Posts": {
             "type": "global-latest-posts"
+        },
+        "Global-Company-Info": {
+            "type": "global-company-info"
         }
     },
     "order": [
@@ -25,6 +28,7 @@
         "Home-Best-Selling",
         "Home-Offers",
         "Global-Customer-Review",
-        "Global-Latest-Posts"
-    ] 
+        "Global-Latest-Posts",
+        "Global-Company-Info"
+    ]
 }

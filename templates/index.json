@@ -14,6 +14,9 @@
         },
         "Global-Customer-Review": {
             "type": "global-customer-review"
+        },
+        "Global-Latest-Posts": {
+            "type": "global-latest-posts"
         }
     },
     "order": [
@@ -21,6 +24,7 @@
         "Home-Our-Categories",
         "Home-Best-Selling",
         "Home-Offers",
-        "Global-Customer-Review"
+        "Global-Customer-Review",
+        "Global-Latest-Posts"
     ] 
 }

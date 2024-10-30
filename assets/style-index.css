@@ -371,3 +371,11 @@ p, a, li, button {
     fill: #F4890A;
     stroke: #F4890A;
 }
+
+.latest-posts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+}

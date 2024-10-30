@@ -1,0 +1,37 @@
+<div class="container">
+    <h2 class="section-title">Latest Posts</h2>
+    <div class="grid-3-column">
+        <div class="latest-posts-container">
+            <img class="cover-image" src="{{ 'image-blog-post-1.png' | asset_url }}" alt="" width="100%" />
+            <p>feb 22, 2024  -  technology</p>
+            <h5>Technology hack that you don’t know</h5>
+        </div>
+        <div class="latest-posts-container">
+            <img class="cover-image" src="{{ 'image-blog-post-2.png' | asset_url }}" alt="" width="100%" />
+            <p>feb 22, 2024  -  watches</p>
+            <h5>Best digital watches to buy in this year</h5>
+        </div>
+        <div class="latest-posts-container">
+            <img class="cover-image" src="{{ 'image-blog-post-3.png' | asset_url }}" alt="" width="100%" />
+            <p>feb 22, 2024  -  Gadgets</p>
+            <h5>How to use gimbal to take video</h5>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+{%  schema  %}  
+    {
+        "name": "Latest Posts",
+        "tag": "section",
+        "class": "page-section section-vertical-spacing"
+    }
+{% endschema %}

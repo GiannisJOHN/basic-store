@@ -190,7 +190,6 @@ p, a, li, button {
 }
 
 .navbar {
-    border-bottom: 1px solid var(--color-stroke);
     position: relative;
     font-weight: bold;
 }
@@ -508,6 +507,7 @@ p, a, li, button {
 .footer {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .footer-description {
@@ -539,14 +539,28 @@ p, a, li, button {
     gap: var(--grid-gap);
 }
 
+@media (max-width: 920px) {
+    .grid-4-column-footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-4-column-footer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 .footer-bottom {
     display: flex;
     justify-content: center;
     width: 100%;
     border-top: 1px solid var(--color-stroke);
     margin-top: 60px;
-    padding: 20px 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
+
 
 .footer-bottom-description {
     font: var(--font-text-sm) !important;

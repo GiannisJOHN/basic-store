@@ -39,3 +39,37 @@
 .price-range-filter-container {
     order: 3;
 }
+
+.filter-title {
+    margin-bottom: 8px;
+    font: var(--font-desktop-h3);
+    font-weight: 700;
+    border-bottom: 1px solid var(--color-stroke);
+}
+
+.filter-dropdown {
+    height: 0;
+    overflow: hidden;
+}
+
+.filter-description {
+    margin-bottom: var(--space-16);
+}
+
+.filter-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.price-range-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.price-range-input {
+    width: 140px;
+    padding: 11px 14px;
+    font: var(--font-text-md);
+}

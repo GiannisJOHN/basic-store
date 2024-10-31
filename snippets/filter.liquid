@@ -1,10 +1,10 @@
-<form class="form-filter">
+<form class="form-filter js-form-filter">
 	{% for filter in collection.filters %}
 
 		{% # BOOLEAN %}
 		{% if filter.type == "boolean" %}
 			<div class="boolean-filter-container">	
-				<ul>
+				<ul class="filter-list">
 					<li>
 						<label for="Filter-{{ filter.param_name }}-true">
 							<input
@@ -40,25 +40,27 @@
 		{% # LIST %}
 		{% if filter.type == "list" %}
 			<div class="list-filter-container">
-				<h5>{{ filter.label }}</h5>
-				<ul>
-					{% for filter_value in filter.values %}
-						<li>
-							<label for="Filter-{{ filter.param_name }}-{{ forloop.index }}">
-								<input type="checkbox"
-								name="{{ filter_value.param_name }}"
-								value="{{ filter_value.value }}"
-								id="Filter-{{ filter.param_name }}-{{ forloop.index }}"
-								{% if filter_value.active -%}checked{%- endif %}
-								{% if filter_value.count == 0 and filter_value.active == false -%}disabled{%- endif %}>
-	
-							{{ filter_value.label }}
-							</label>
-						</li>
-					{% endfor %}
-				</ul>
-				<div>
-				  <input class="btn btn-filter" type="submit" value="apply">
+				<button type="button" class="filter-title js-filter-title-button" aria-expanded="false" aria-controls="filter-list-{{ forloop.index0 }}" >{{ filter.label }}</button>
+				<div id="filter-list-{{ forloop.index0 }}" class="filter-dropdown js-filter-dropdown">
+					<ul class="filter-list">
+						{% for filter_value in filter.values %}
+							<li>
+								<label for="Filter-{{ filter.param_name }}-{{ forloop.index }}">
+									<input type="checkbox"
+									name="{{ filter_value.param_name }}"
+									value="{{ filter_value.value }}"
+									id="Filter-{{ filter.param_name }}-{{ forloop.index }}"
+									{% if filter_value.active -%}checked{%- endif %}
+									{% if filter_value.count == 0 and filter_value.active == false -%}disabled{%- endif %}>
+		
+								{{ filter_value.label }}
+								</label>
+							</li>
+						{% endfor %}
+					</ul>
+					<div>
+					  <input class="btn btn-filter" type="submit" value="apply">
+					</div>
 				</div>
 			</div>
 		{% endif %}
@@ -67,38 +69,43 @@
 		{% # PRICE RANGE %}
 		{% if filter.type == "price_range" %}
 			<div class="price-range-filter-container">
-				<h5>{{ filter.label }}</h5>
-				<div class="">
-					<span>{{ cart.currency.symbol }}</span>
-	
-					<input name="{{ filter.min_value.param_name }}"
-					  id="Filter-{{ filter.min_value.param_name }}"
-					  {% if filter.min_value.value -%}
-						value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"
-					  {%- endif %}
-					  type="number"
-					  placeholder="0"
-					  min="0"
-					  max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-					>
-	
-					<label for="Filter-{{ filter.min_value.param_name }}">From</label>
-				</div>
-				<div class="">
-					<span>{{ cart.currency.symbol }}</span>
-	
-					<input name="{{ filter.max_value.param_name }}"
-					  id="Filter-{{ filter.max_value.param_name }}"
-					  {% if filter.max_value.value -%}
-						value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"
-					  {%- endif %}
-					  type="number"
-					  placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-					  min="0"
-					  max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-					>
-	
-					<label for="Filter-{{ filter.max_value.param_name }}">To</label>
+				<h5 class="filter-title">{{ filter.label }}</h5>
+				<p class="filter-description">The highest price is {{ filter.range_max | money }}</p>
+				<div class="price-range-input-container">
+					<div class="price-range-input-column">
+						<span>{{ cart.currency.symbol }}</span>
+		
+						<input class="price-range-input" name="{{ filter.min_value.param_name }}"
+						  id="Filter-{{ filter.min_value.param_name }}"
+						  {% if filter.min_value.value -%}
+							value="{{ filter.min_value.value | divided_by: 100 }}"
+						  {%- endif %}
+						  type="number"
+						  placeholder="0"
+						  min="0"
+						  max="{{ filter.range_max }}"
+						  autocomplete="off"
+						>
+		
+						<label for="Filter-{{ filter.min_value.param_name }}">From</label>
+					</div>
+					<div class="price-range-input-column">
+						<span>{{ cart.currency.symbol }}</span>
+		
+						<input class="price-range-input" name="{{ filter.max_value.param_name }}"
+						  id="Filter-{{ filter.max_value.param_name }}"
+						  {% if filter.max_value.value -%}  
+							value="{{ filter.max_value.value | divided_by: 100 }}"
+						  {%- endif %}
+						  type="number"
+						  placeholder="{{ filter.range_max | money_without_currency }}"
+						  min="0"
+						  max="{{ filter.range_max }}"
+						  autocomplete="off"
+						>
+
+						<label for="Filter-{{ filter.max_value.param_name }}">To</label>
+					</div>
 				</div>
 				<div>
 					<input class="btn btn-filter" type="submit" value="apply">

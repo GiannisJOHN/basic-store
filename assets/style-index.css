@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    letter-spacing: 0.12rem;           
+    letter-spacing: 0.08rem;           
     word-spacing: 0.16rem; 
 }
 
@@ -43,7 +43,7 @@ h5 {
     font-weight: 700;
 }
 
-p, a, li, button {
+p, a, li, button, label, span {
     font: var(--font-text-md);
 }
 

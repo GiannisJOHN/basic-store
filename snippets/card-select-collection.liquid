@@ -1,5 +1,7 @@
 <div class="flex-column-center">
     <img class="main-border-radius" src="{{ collection | image_url: width: 360 }}" alt="My image's alt text" style="width: 100%;" />
-    <h3 class="our-categories-title-spacing" >{{ collection.title }}</h3>
+    <h3 class="our-categories-title-spacing" >
+        <a href="{{ collection.url }}">{{ collection.title }}</a>
+    </h3>
     <p class="text-grey">({{ collection.products.size }} items)</p>
 </div>

@@ -1,0 +1,11 @@
+{% paginate collection.products by 6 %}
+    {% render 'sort-products.liquid', collection: collection, paginate: paginate %}
+    
+    <div class="grid-3-column">
+        {% for product in collection.products -%}
+            {% render "card-product", product: product %}
+        {%- endfor %}
+    </div>
+
+    {{- paginate | default_pagination -}}
+{% endpaginate %}

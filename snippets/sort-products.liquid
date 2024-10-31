@@ -1,0 +1,41 @@
+{% liquid
+    assign first_item_of_current_page = paginate.current_offset | plus: 1
+    assign last_item_of_current_page = paginate.current_offset | plus: paginate.page_size
+
+    assign last_page_items = paginate.items | modulo: paginate.page_size
+
+    if paginate.current_page == paginate.pages and last_page_items != 0
+        assign last_item_of_current_page = paginate.current_offset | plus: last_page_items
+    endif
+%}
+
+<div class="collection-sort-container">
+    <p class="">
+        Showing {{ first_item_of_current_page }} - {{ last_item_of_current_page }} of {{ paginate.items }} results
+    </p>
+    <form
+        class="d-flex justify-content-end"
+        method="get"
+        action=""
+        id="SortByForm">
+        <label for="sort-by" class="fw-bold">Sort by: &nbsp;</label>
+        <select
+            name="sort_by"
+            class="collection-select"
+            id="sort-by"
+            onchange="this.form.submit()">
+            {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
+
+            {% for option in collection.sort_options %}
+                <option
+                    value="{{ option.value }}"
+                    {% if option.value == sort_by %}
+                    selected="selected"
+                    {% endif %}>
+                    {{- option.name | downcase -}}
+                </option>
+
+            {% endfor %}
+        </select>
+    </form>  
+</div>

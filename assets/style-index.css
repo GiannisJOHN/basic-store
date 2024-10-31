@@ -71,9 +71,7 @@ p, a, li, button {
     max-width: 1200px;
 }
 
-.btn {
-    padding: 10px 32px;
-}
+
 
 .cover-image {
     width: 100%;
@@ -331,6 +329,10 @@ p, a, li, button {
     margin: 12px 0 3px 0;
 }
 
+.our-categories-title-spacing:hover {
+    color: blue;
+}
+
 .product-card-image-container {
     background-color: #F6F6F6;
     width: 100%;
@@ -454,6 +456,8 @@ p, a, li, button {
   .subscribe-cta-input::placeholder {
     color: #bbb;
   }
+
+
   
   .subscribe-cta-btn {
     padding: 0.75rem 1.5rem;

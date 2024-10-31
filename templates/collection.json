@@ -1,0 +1,15 @@
+{
+    "sections": {
+        "Global-Page-Header": {
+            "type": "global-page-header"
+        },
+        "Global-Subscribe-Cta": {
+            "type": "global-subscribe-cta"
+        }
+
+    },
+    "order": [
+        "Global-Page-Header",
+        "Global-Subscribe-Cta"
+    ]
+}

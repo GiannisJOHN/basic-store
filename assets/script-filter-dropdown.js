@@ -22,3 +22,22 @@
         }
     }
 })();
+
+(function () {
+    let filterListButtons = document.querySelectorAll(".js-filter-title-button");
+
+    
+    filterListButtons[1].setAttribute('aria-expanded', 'true');
+    filterListButtons[2].setAttribute('aria-expanded', 'true');
+
+    filterListButtons.forEach((each) => {
+        let dropdown = each.nextElementSibling;
+
+        if (each.getAttribute('aria-expanded') == 'true') {
+            dropdown.style.height = dropdown.scrollHeight + 'px';
+        } else {
+            dropdown.style.height = 0;
+        }
+    })
+
+})();//onload

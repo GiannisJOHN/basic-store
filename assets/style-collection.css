@@ -29,3 +29,13 @@
     align-items: flex-start;
     gap: 32px;
 }
+
+.boolean-filter-container {
+    order: 1;
+}
+.list-filter-container {
+    order: 2;
+}
+.price-range-filter-container {
+    order: 3;
+}

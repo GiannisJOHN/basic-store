@@ -1,20 +1,26 @@
-<div class="container">
-    <div class="grid-2-column-collection">
-        <div>
-            <div class="collection-filters">
-                {% render "filter", collection: collection %}
-            </div>
-        </div>
-        <div>
-            {% render 'collection-pagination', collection: collection %}
-        </div>
+{% liquid
+    assign page_title = nil
+    
+    if template.name == "collection" or template.name == "list-collection"
+        assign page_title = "Shop" 
+    elsif  template.name == "cart"
+        assign page_title = "Cart" 
+    endif
+%}
+   
+
+
+<div class="page-header">
+    <div class="page-header-content">
+        <h2>{{ page_title }}</h2>
     </div>
+    <img class="cover-image no-radius" src="{{ 'image-page-header.jpg' | asset_url }}" alt="" width="100%" height="100%"/>
 </div>
+
 
 {%  schema  %}  
     {
         "name": "Page Header",
-        "tag": "section",
-        "class": "page-section section-vertical-spacing"
+        "tag": "section"
     }
 {% endschema %}

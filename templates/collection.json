@@ -3,6 +3,12 @@
         "Global-Page-Header": {
             "type": "global-page-header"
         },
+        "Collection-Product-Grid": {
+            "type": "collection-product-grid"
+        },
+        "Global-Customer-Review": {
+            "type": "global-customer-review"
+        },
         "Global-Subscribe-Cta": {
             "type": "global-subscribe-cta"
         }
@@ -10,6 +16,8 @@
     },
     "order": [
         "Global-Page-Header",
+        "Collection-Product-Grid",
+        "Global-Customer-Review",
         "Global-Subscribe-Cta"
     ]
 }
